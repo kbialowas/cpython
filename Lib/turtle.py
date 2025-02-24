@@ -2575,7 +2575,7 @@ class _TurtleImage(object):
             for item in self._item:
                 screen._delete(item)
         elif self._type == "shape_drawer":
-            del self._item
+            self._item.delete()
 
         self._type = screen._shapes[shapeIndex]._type
         self.shapeIndex = shapeIndex
